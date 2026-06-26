@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Portugal — Curiosidades, Cultura e Sociedade</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Um panorama de Portugal: bandeira, cultura, culinária, idioma e política.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- decorative azulejo pattern, repeats behind topbar -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <pattern id="azulejo" width="56" height="56" patternUnits="userSpaceOnUse">
+      <rect width="56" height="56" fill="none"/>
+      <path d="M28 2 L54 28 L28 54 L2 28 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+      <circle cx="28" cy="28" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <div class="brand">
+    <svg class="brand-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <clipPath id="mark-clip"><rect x="1" y="1" width="38" height="38" rx="9"/></clipPath>
+      </defs>
+      <g clip-path="url(#mark-clip)">
+        <rect x="1" y="1" width="38" height="38" fill="#046a38"/>
+        <rect x="16" y="1" width="23" height="38" fill="#d4202c"/>
+        <circle cx="16" cy="20" r="7.5" fill="#c9a227" stroke="#0b0c10" stroke-width="1.2"/>
+        <circle cx="16" cy="20" r="3.4" fill="none" stroke="#0b0c10" stroke-width="1.1"/>
+      </g>
+      <rect x="1" y="1" width="38" height="38" rx="9" fill="none" stroke="rgba(0,0,0,.25)" stroke-width="1"/>
+    </svg>
+    <div class="brand-text">
+      <span class="brand-title">Portugal<span class="dot">.</span></span>
+      <span class="brand-subtitle">Curiosidades, Cultura &amp; Sociedade</span>
+    </div>
+  </div>
+
+</header>
+
+<div class="layout">
+
+  <nav class="sidebar" aria-label="Navegação principal">
+    <button class="tab active" data-tab="inicio">
+      <svg viewBox="0 0 24 24" class="tab-icon"><path d="M4 11.5 12 4l8 7.5M6 10v9.5h12V10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Início</span>
+    </button>
+    <button class="tab" data-tab="bandeira">
+      <svg viewBox="0 0 24 24" class="tab-icon"><path d="M5 3v18M5 4h14l-3 4 3 4H5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Bandeira</span>
+    </button>
+    <button class="tab" data-tab="cultura">
+      <svg viewBox="0 0 24 24" class="tab-icon"><path d="M9 18V5l11-2v13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.5" cy="16" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+      <span>Cultura</span>
+    </button>
+    <button class="tab" data-tab="culinaria">
+      <svg viewBox="0 0 24 24" class="tab-icon"><path d="M7 3v8a2 2 0 0 0 4 0V3M9 11v10M17 3c-1.5 0-2.5 1.6-2.5 4.5S15.5 12 17 12s2.5-1.6 2.5-4.5S18.5 3 17 3Zm0 9v8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Culinária</span>
+    </button>
+    <button class="tab" data-tab="idioma">
+      <svg viewBox="0 0 24 24" class="tab-icon"><path d="M4 5h13a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H10l-5 4v-4H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+      <span>Idioma</span>
+    </button>
+    <button class="tab" data-tab="politica">
+      <svg viewBox="0 0 24 24" class="tab-icon"><path d="M4 21h16M5 21V10M19 21V10M3 10l9-6 9 6M8 10v6M12 10v6M16 10v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Política</span>
+    </button>
+
+    <div class="sidebar-foot">
+      <div class="progress-label">
+        <span>Exploração</span>
+        <span id="progress-pct">20%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+  </nav>
+
+  <main class="content">
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="page active">
+      <div class="hero-card">
+        <div class="hero-pattern" aria-hidden="true"></div>
+        <div class="hero-text">
+          <span class="eyebrow">Bem-vindo(a)</span>
+          <h1>Um país pequeno,<br><em>uma história imensa.</em></h1>
+          <p>Este site reúne curiosidades sobre Portugal — da bandeira nascida com a República à mesa do bacalhau, passando pelo fado, pela língua e pelas instituições que organizam o país hoje.</p>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-icon icon-green">★</span>
+          <span class="stat-value" data-count="1143">0</span>
+          <span class="stat-label">Fundação do Reino de Portugal</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon icon-red">✦</span>
+          <span class="stat-value" data-count="1974" data-prefix="25/04/">0</span>
+          <span class="stat-label">Revolução dos Cravos</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon icon-gold">◆</span>
+          <span class="stat-value" data-count="260" data-suffix="M+">0</span>
+          <span class="stat-label">Falantes de português no mundo</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon icon-green">▲</span>
+          <span class="stat-value" data-count="230">0</span>
+          <span class="stat-label">Deputados na Assembleia da República</span>
+        </div>
+      </div>
+
+      <h3 class="section-label">Explorar por tema</h3>
+      <div class="quicklinks-grid">
+        <button class="quicklink" data-goto="bandeira">
+          <svg viewBox="0 0 24 24" class="quicklink-icon"><path d="M5 3v18M5 4h14l-3 4 3 4H5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Bandeira</span>
+        </button>
+        <button class="quicklink" data-goto="cultura">
+          <svg viewBox="0 0 24 24" class="quicklink-icon"><path d="M9 18V5l11-2v13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="16" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span>Cultura</span>
+        </button>
+        <button class="quicklink" data-goto="culinaria">
+          <svg viewBox="0 0 24 24" class="quicklink-icon"><path d="M7 3v8a2 2 0 0 0 4 0V3M9 11v10M17 3c-1.5 0-2.5 1.6-2.5 4.5S15.5 12 17 12s2.5-1.6 2.5-4.5S18.5 3 17 3Zm0 9v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Culinária</span>
+        </button>
+        <button class="quicklink" data-goto="idioma">
+          <svg viewBox="0 0 24 24" class="quicklink-icon"><path d="M4 5h13a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H10l-5 4v-4H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <span>Idioma</span>
+        </button>
+        <button class="quicklink" data-goto="politica">
+          <svg viewBox="0 0 24 24" class="quicklink-icon"><path d="M4 21h16M5 21V10M19 21V10M3 10l9-6 9 6M8 10v6M12 10v6M16 10v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Política</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- BANDEIRA -->
+    <section id="bandeira" class="page">
+      <span class="eyebrow">01 — Identidade</span>
+      <h2>Bandeira de Portugal</h2>
+      <p class="section-intro">Adotada oficialmente em 1911, após a implantação da República, cada elemento da bandeira carrega um significado histórico.</p>
+
+      <div class="card wide-card">
+        <p>O escudo da bandeira de Portugal remete à Batalha de Ourique (1139), momento simbólico em que <strong>D. Afonso Henriques consolidou a independência portuguesa</strong>, afirmando o nascimento do país como <strong>reino soberano</strong>.</p>
+      </div>
+
+      <div class="flag-layout">
+        <div class="flag-box">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="Bandeira de Portugal">
+        </div>
+
+        <div class="flag-meanings">
+          <div class="meaning-card meaning-green">
+            <span class="meaning-swatch"></span>
+            <div>
+              <h4>Verde</h4>
+              <p>Representa a esperança do povo português e o futuro da nação.</p>
+            </div>
+          </div>
+          <div class="meaning-card meaning-red">
+            <span class="meaning-swatch"></span>
+            <div>
+              <h4>Vermelho</h4>
+              <p>Simboliza a coragem, a luta e o sangue derramado ao longo da história.</p>
+            </div>
+          </div>
+          <div class="meaning-card meaning-gold">
+            <span class="meaning-swatch"></span>
+            <div>
+              <h4>Esfera armilar</h4>
+              <p>Instrumento náutico que representa a Era dos Descobrimentos.</p>
+            </div>
+          </div>
+          <div class="meaning-card meaning-silver">
+            <span class="meaning-swatch"></span>
+            <div>
+              <h4>Escudo</h4>
+              <p>Simboliza as vitórias históricas de Portugal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CULTURA -->
+    <section id="cultura" class="page">
+      <span class="eyebrow">02 — Tradição</span>
+      <h2>Cultura Portuguesa</h2>
+      <p class="section-intro">Da música melancólica do fado às festas que tomam as ruas em junho, a cultura portuguesa é marcada por emoção e identidade.</p>
+
+      <div class="grid">
+        <div class="card">
+          <span class="card-tag">Música</span>
+          <h3>Fado</h3>
+          <p>Estilo musical tradicional, marcado pela melancolia, emoção e saudade. É considerado Patrimônio Cultural Imaterial da Humanidade.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">Arte</span>
+          <h3>Azulejos</h3>
+          <p>Elementos artísticos muito presentes em igrejas, palácios e estações, usados para retratar fatos históricos.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">Tradição</span>
+          <h3>Festas Populares</h3>
+          <p>Destaque para os Santos Populares, como Santo António em Lisboa e São João no Porto.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">Identidade</span>
+          <h3>Saudade</h3>
+          <p>Sentimento profundo de nostalgia, considerado uma das marcas da identidade portuguesa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CULINÁRIA -->
+    <section id="culinaria" class="page">
+      <span class="eyebrow">03 — Sabores</span>
+      <h2>Culinária Portuguesa</h2>
+      <p class="section-intro">Diz-se que há mil maneiras de preparar o bacalhau — uma só para o pastel de nata, e nenhuma igual em outro lugar do mundo.</p>
+
+      <div class="grid">
+        <div class="card">
+          <span class="card-tag">Prato principal</span>
+          <h3>Bacalhau</h3>
+          <p>O prato mais tradicional do país, preparado de diversas formas, como Bacalhau à Brás e à Gomes de Sá.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">Doce</span>
+          <h3>Pastel de Nata</h3>
+          <p>Doce típico feito com massa folhada e creme de ovos, conhecido mundialmente.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">Lanche</span>
+          <h3>Francesinha</h3>
+          <p>Sanduíche típico do Porto, feito com carne, queijo e um molho especial.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">Bebida</span>
+          <h3>Vinhos</h3>
+          <p>Portugal é famoso pela produção de vinhos, como o Vinho do Porto e o Vinho Verde.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDIOMA -->
+    <section id="idioma" class="page">
+      <span class="eyebrow">04 — Língua</span>
+      <h2>Idioma</h2>
+      <p class="section-intro">O português nasceu na Península Ibérica e hoje atravessa continentes — mas o falar de Portugal guarda um sotaque só seu.</p>
+
+      <div class="card wide-card">
+        <p>O idioma oficial de Portugal é o <strong>português</strong>, uma das línguas mais faladas do mundo.</p>
+        <p>Em algumas regiões, como Miranda do Douro, também se fala o <strong>mirandês</strong>, reconhecido oficialmente.</p>
+        <p>O português europeu possui diferenças em relação ao brasileiro, como vocabulário e pronúncia.</p>
+      </div>
+
+      <h3 class="section-label">Português de Portugal × Brasil</h3>
+      <div class="word-grid">
+        <div class="word-card"><span class="word-pt">Fixe</span><span class="word-arrow">→</span><span class="word-br">Legal</span></div>
+        <div class="word-card"><span class="word-pt">Giro</span><span class="word-arrow">→</span><span class="word-br">Bonito</span></div>
+        <div class="word-card"><span class="word-pt">Autocarro</span><span class="word-arrow">→</span><span class="word-br">Ônibus</span></div>
+      </div>
+    </section>
+
+    <!-- POLÍTICA -->
+    <section id="politica" class="page">
+      <span class="eyebrow">05 — Estado</span>
+      <h2>Política</h2>
+      <p class="section-intro">O sistema político atual de Portugal nasceu de uma revolução pacífica e organiza-se em torno de três pilares.</p>
+
+      <div class="card wide-card">
+        <p>Portugal é uma <strong>República semipresidencialista</strong>. O atual sistema político surgiu após a <strong>Revolução dos Cravos</strong>, em 25 de abril de 1974.</p>
+      </div>
+
+      <div class="org-chart">
+        <div class="org-node org-top">
+          <span class="org-role">Chefe de Estado</span>
+          <strong>Presidente da República</strong>
+        </div>
+        <div class="org-connector"></div>
+        <div class="org-row">
+          <div class="org-node">
+            <span class="org-role">Chefe de Governo</span>
+            <strong>Primeiro-Ministro</strong>
+          </div>
+          <div class="org-node">
+            <span class="org-role">Poder Legislativo · 230 deputados</span>
+            <strong>Assembleia da República</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="footer">
+  <p>Trabalho escolar &middot; Site desenvolvido em HTML, CSS e JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
